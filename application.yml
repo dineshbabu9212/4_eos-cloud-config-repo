@@ -1,21 +1,21 @@
 spring:
-    datasource:
-        url: jdbc:mysql://ed-database-01.cdgiiabcm6en.us-east-1.rds.amazonaws.com:3306/edwiki?createDatabaseIfNotExist=true
-        username: admin
-        password: admin123
-        driverClassName: com.mysql.cj.jdbc.Driver
-    jpa:
-        hibernate.ddl-auto: create
-        show-sql: true
-        generate-ddl: false
-  # Producer properties
-    kafka:
-      bootstrap-servers: b-1.eoskafka01.z9736s.c18.kafka.us-east-1.amazonaws.com:9092
-      group-id: group_id
+  datasource:
+    url: jdbc:mysql://db-mysql-blr1-14436-do-user-14283443-0.b.db.ondigitalocean.com:25060/edwiki?createDatabaseIfNotExist=true
+    username: doadmin
+    password: 'AVNS_wyOQSmHlGjLOt_sV9LV'
+    driverClassName: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate.ddl-auto: create
+    show-sql: true
+    generate-ddl: false
+    # Producer properties
+  kafka:
+    bootstrap-servers: 68.183.93.60:9092
+    group-id: group_id
 topic:
   name:
-    producer: ed-topic-1 
-    consumer: ed-topic-1 
+    producer: ed-topic-1
+    consumer: ed-topic-1
 # Common Kafka Properties
 auto:
   create:
@@ -24,24 +24,24 @@ auto:
 
 #AWS properties
 cloud:
-    aws:
-        region:
-            static: us-east-1
-        stack:
-            auto: false
-        credentials:
-            accessKey: AKIAYMMFC5FDT7TJUBHS 
-            secretKey: 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 
+  digitalocean:
+    region:
+      static: BLR1
+    stack:
+      auto: false
+    credentials:
+      accessKey: DO004XCALZCGVX9FKYFY
+      secretKey: dSb68MT/Xbn5qXhZwdlrTAk7d3vW4f5NEHjB0bHn3gg
 
 application:
-    bucket:
-        name: eos-catalog-images 
+  bucket:
+    name: eos-catalog-images
 
-logging:
-    level:
-        com:
-            amazonaws:
-                util:
-                    EC2MetadataUtils: error
- 
-baseUrl: http://prod-gateway.edshopper.com:5555/v1
+# logging:
+#   level:
+#     com:
+#       amazonaws:
+#         util:
+#           EC2MetadataUtils: error
+
+baseUrl: http://dev-gateway.edshopper.com:5555/v1
