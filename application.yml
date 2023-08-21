@@ -24,24 +24,24 @@ auto:
 
 #AWS properties
 cloud:
-  digitalocean:
+  aws:
     region:
-      static: BLR1
+      static: us-east-1
     stack:
       auto: false
     credentials:
-      accessKey: DO004XCALZCGVX9FKYFY
-      secretKey: dSb68MT/Xbn5qXhZwdlrTAk7d3vW4f5NEHjB0bHn3gg
+      accessKey: AKIA5HYFRXNVNIHSUFXL
+      secretKey: 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
 
 application:
   bucket:
-    name: eos-catalog-images
+    name: eos-catalouge-images
 
-# logging:
-#   level:
-#     com:
-#       amazonaws:
-#         util:
-#           EC2MetadataUtils: error
+logging:
+  level:
+    com:
+      amazonaws:
+        util:
+          EC2MetadataUtils: error
 
 baseUrl: http://dev-gateway.edshopper.com:5555/v1
