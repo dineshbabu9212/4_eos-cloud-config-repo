@@ -44,4 +44,4 @@ logging:
         util:
           EC2MetadataUtils: error
 
-baseUrl: http://dev-gateway.edshopper.com:5555/v1
+baseUrl: http://prod-gateway.edshopper.com/v1
