@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://eos-db-mysql-do-user-14553946-0.b.db.ondigitalocean.com:25060/edwiki?createDatabaseIfNotExist=true
-    username: doadmin
-    password: 'AVNS_1BmR8sE9jbfypScaLkw'
+    url: jdbc:mysql://eos-mysql-svc:3306/edwiki?createDatabaseIfNotExist=true
+    username: root
+    password: 'admin123'
     driverClassName: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate.ddl-auto: create
@@ -10,7 +10,7 @@ spring:
     generate-ddl: false
     # Producer properties
   kafka:
-    bootstrap-servers: 143.244.137.109:9092
+    bootstrap-servers: kafka-svc:9092
     group-id: group_id
 topic:
   name:
