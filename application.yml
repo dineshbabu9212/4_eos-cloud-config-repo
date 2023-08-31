@@ -10,7 +10,7 @@ spring:
     generate-ddl: false
     # Producer properties
   kafka:
-    bootstrap-servers: kafka-svc:9092
+    bootstrap-servers: my-cluster-kafka-bootstrap.default.svc.cluster.local:9092
     group-id: group_id
 topic:
   name:
